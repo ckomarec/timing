@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>XMas Card 2015</title>
+    <style type="text/css">
+      canvas { 
+      	background-color: red; }
+    </style>
+  </head>
+  <body >
+    <canvas id="tutorial" width="300" height="217"></canvas>
+
+    <script type="text/javascript">
+        var canvas = document.getElementById('tutorial');
+        // if (canvas.getContext){
+          var ctx = canvas.getContext('2d');
+        var cvrimg  = new Image ();
+        cvrimg.src = 'cover.png';
+        var insimg  = new Image ();
+        insimg.src = 'inside.png';
+        cvrimg.addEventListener('load',showCover,false);
+        function showCover(){
+        	ctx.drawImage(cvrimg,0,0);
+        }
+        canvas.addEventListener('click',showInside,false);
+        function showInside(){
+        	ctx.drawImage(insimg,0,0);
+        }
+      		
+      
+    </script>
+  </body>
+</html>
